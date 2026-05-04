@@ -1,0 +1,207 @@
+/* ===== Base ===== */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #0b141a;
+}
+
+/* ===== Layout ===== */
+.app-container {
+  display: flex;
+  height: 100vh;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 260px;
+  background: #202c33;
+  color: white;
+  padding: 10px;
+}
+
+.chat-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #2a3942;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.chat-user:hover {
+  background: #2a3942;
+}
+
+.online {
+  color: #00a884;
+}
+
+.offline {
+  color: gray;
+}
+
+/* ===== Avatar ===== */
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #00a884;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+}
+
+/* ===== Chat Container ===== */
+.chat-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Header ===== */
+.chat-header {
+  background: #202c33;
+  color: #e9edef;
+  padding: 15px;
+  font-weight: 500;
+  border-bottom: 1px solid #2a3942;
+}
+
+/* ===== Messages ===== */
+.messages {
+  flex: 1;
+  padding: 10px 15px;
+  overflow-y: auto;
+  background: #0b141a;
+}
+
+/* ===== Message Bubbles ===== */
+.message {
+  background: #202c33;
+  color: #e9edef;
+  padding: 6px 10px;
+  margin: 3px 0;
+  border-radius: 12px 12px 12px 4px;
+  max-width: 45%;
+  width: fit-content;
+  font-size: 13px;
+  line-height: 1.4;
+
+  animation: fadeIn 0.2s ease-in;
+}
+
+.message.me {
+  background: #005c4b;
+  margin-left: auto;
+  border-radius: 12px 12px 4px 12px;
+}
+
+/* ===== Timestamp ===== */
+.message span {
+  display: block;
+  font-size: 10px;
+  opacity: 0.6;
+  margin-top: 3px;
+  text-align: right;
+}
+
+/* ===== Input Box ===== */
+.input-box {
+  display: flex;
+  padding: 10px;
+  background: rgba(32, 44, 51, 0.7);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid #2a3942;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background: #2a3942;
+  color: white;
+}
+
+.input-box button {
+  margin-left: 10px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  border: none;
+  background: #00a884;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== Typing ===== */
+.typing {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+}
+
+/* ===== Login ===== */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b141a;
+}
+
+.login-box {
+  background: #202c33;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+}
+
+.login-box h2 {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: #2a3942;
+  color: white;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #00a884;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ===== Animation ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.error {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
